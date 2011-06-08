@@ -1,0 +1,24 @@
+README: nlpkit 0.1
+============================================================
+
+nlpkit is a collection of command line utillities and Python libraries
+intended to helpful in performing natural language processing tasks.
+
+What is an NLP related task, then? In my experience it mostly has to do with feeding picky command line tools with awkwardly formatted input
+and then afterwards try to decipher their output. That's at least what nlpkit will help you do.
+
+Although some of the modules in nlpkit fit nicely together, it's not intended as a framework.
+There are a few conventions that you'll need to be aware of, though.
+
+Relative paths to data files are resolved through the paths.data_path function, which has certain expectations as to
+where your data folder is kept and what it's called. (It expects it to be called 'data'). You can influence the search procedure
+through the environment variable NLPKIT_DATA.
+
+
+
+
+
+
+
+
+
