@@ -61,8 +61,10 @@ class ResultTable(object):
                                     if row.allows(result) and column.allows(result)]
                 if len(results_for_cell) > 1:
                     msg = "Cell {},{} is underconstrained. ".format(i,j)
-                    msg += "Row constraint {} and column constraint {} fit {} results"\
+                    msg += "Row constraint {} and column constraint {} fit {} results\n"\
                         .format(row, column, len(results_for_cell))
+                    for i, result in enumerate(results_for_cell):
+                        msg += "\t{}: {}\n".format(i+1, result)
                     raise StandardError(msg)
                 elif len(results_for_cell) == 1:
                     table[i,j] = results_for_cell[0]

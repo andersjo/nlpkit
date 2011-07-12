@@ -16,7 +16,7 @@ def data_path(relative_path):
         path = os.path.join(dir, relative_path)
         if exists(path) and access(path, os.R_OK):
             return abspath(path)
-    return None
+    raise IOError()
 
 def save_data_path(relative_path, create_dir=False):
     data_dir = data_dirs[0]
